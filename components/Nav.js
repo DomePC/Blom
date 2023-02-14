@@ -14,9 +14,7 @@ export default function Nav() {
       <ul>
         {!user && (
           <Link legacyBehavior href={'/auth/login'}>
-            <a className="py-2 px-4 text-lg bg-teal-400 text-white rounded-lg ml-8 font-semibold hover:bg-gray-800 transition-all ease-linear duration-100">
-              Join Now
-            </a>
+            <a className="classic_button">Join Now</a>
           </Link>
         )}
         {user && (

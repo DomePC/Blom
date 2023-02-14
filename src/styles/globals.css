@@ -2,6 +2,12 @@
 @tailwind base;
 @tailwind utilities;
 
+@layer components {
+  .classic_button {
+    @apply py-2 px-4 text-lg bg-teal-400 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all ease-linear duration-100;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
