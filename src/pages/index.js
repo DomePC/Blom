@@ -1,5 +1,11 @@
+import CardAnaly from 'components/CardAnaly';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import { BiUserCircle } from 'react-icons/bi';
+import { DiCodepen } from 'react-icons/di';
+import { AiOutlineStock } from 'react-icons/ai';
+
 export default function Home() {
   return (
     <div>
@@ -39,10 +45,33 @@ export default function Home() {
             Try Blom. The free source app that provides you with everything.
           </h2>
           <p className="text-lg mb-4">Click the button below</p>
-          <button className="classic_button">Start yout journey</button>
+          <Link className="classic_button" href={'/auth/login'}>
+            Start yout journey
+          </Link>
         </section>
-        <section className="p-6 relative -inset-x-8 w-screen bg-teal-500 text-white">
-          <h1 className="text-3xl font-semibold">Why you should use Blom?</h1>
+        <section className="p-8 relative -inset-x-8 w-screen bg-teal-500 text-white">
+          <h1 className="text-3xl font-semibold mb-7">
+            Why you should use Blom?
+          </h1>
+          <div>
+            <p className="text-lg mb-8">
+              Blom is a safe to use platform for learning how to code!
+            </p>
+            <div className="flex justify-center items-center flex-wrap gap-4">
+              <CardAnaly>
+                <BiUserCircle className="w-8 h-8" />
+                <span className="text-gray-800">+3000 users</span>
+              </CardAnaly>
+              <CardAnaly>
+                <AiOutlineStock className="w-8 h-8" />
+                <span className="text-gray-800">+20% in value</span>
+              </CardAnaly>
+              <CardAnaly>
+                <DiCodepen className="w-8 h-8" />
+                <span className="text-gray-800">+2000 lines writen</span>
+              </CardAnaly>
+            </div>
+          </div>
         </section>
       </main>
     </div>
